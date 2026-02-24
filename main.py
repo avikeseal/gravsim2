@@ -33,6 +33,16 @@ G = 13
 MAX_PATH_LENGTH = 500
 MAX_V_LENGTH = 500
 
+#bodies:
+BODIES = {
+        "Moon": {"mass":, "radius":, "color": ()},
+            "Earth": {"mass":, "radius":, "color": ()}
+            "Jupiter": {"mass":, "radius":, "color": ()}
+            "Neutron Star": {"mass":, "radius":, "color" ()}
+            "Black Hole": {"mass":, "radius":, "color": ()}
+         }
+
+
 #this class represents each object in the simulation
 #introducing object variable to the display output:
 class Body:
