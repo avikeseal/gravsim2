@@ -36,11 +36,11 @@ MAX_V_LENGTH = 500
 
 #bodies:
 BODIES = {
-        "Moon": {"mass":, "radius":, "color": ()},
-            "Earth": {"mass":, "radius":, "color": ()}
-            "Jupiter": {"mass":, "radius":, "color": ()}
-            "Neutron Star": {"mass":, "radius":, "color" ()}
-            "Black Hole": {"mass":, "radius":, "color": ()}
+        "Moon": {"mass":100, "radius":15, "color": (200, 200, 200)},
+            "Earth": {"mass":1000, "radius":25, "color": (50, 100, 255)},
+            "Jupiter": {"mass":10000, "radius":45, "color": (255, 180, 100)},
+            "Neutron Star": {"mass":500000, "radius":12, "color": (180, 0, 255)},
+            "Black Hole": {"mass":9999999, "radius":8, "color": (10, 10, 10)},
          }
 
 
@@ -122,6 +122,15 @@ def selection_screen(screen, prompt):
                         #returns the names of the two chosen bodies
                         return bodies_list[index]
 
+pygame.init()
+screen = pygame.display.set_mode()
+
+#selection process:
+choice1 = selection_screen(screen, "Select Body 1:")
+choice2 = selection_screen(screen, "Select Body 2:")
+
+body1 = Body(x=300, y=400, **BODIES[choice1])
+body2 = Body(x=600, y=400, **BODIES[choice2])
 
 #main game loop variable:
 running = True
